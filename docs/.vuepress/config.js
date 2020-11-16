@@ -1,4 +1,6 @@
 module.exports = {
-    base: '/cms/', 
-    // ...
+  base: '/cms/', 
+  themeConfig: {
+    sidebar: 'auto'
+  },
 };
