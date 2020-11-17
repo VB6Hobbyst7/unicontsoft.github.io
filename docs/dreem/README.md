@@ -1,5 +1,3 @@
-<sup>Dreem Business Software</sup>
-
 # Welcome to Dreem World
 
 ## Преглед

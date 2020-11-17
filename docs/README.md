@@ -1,16 +1,16 @@
 ---
 home: true
-heroImage: /hero.png
-heroText: Hero Title
-tagline: Hero subtitle
-actionText: Get Started →
+heroImage: /hero.jpg
+heroText: Dreem Business Software
+tagline: Welcome to Dreem World
+actionText: Към ръководството →
 actionLink: /dreem/
 features:
-- title: Simplicity First
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
-- title: Vue-Powered
-  details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
-- title: Performant
-  details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-footer: MIT Licensed | Copyright © 2018-present Evan You
+- title: ERP
+  details: Интегрирана софтуерна информационна система за планирането и управлението на всички ресурси в предприятието
+- title: POS
+  details: Работа с баркод скенери, връзка с фискален принтер, online и offline режим на работа
+- title: Web
+  details: Електронен обмен на документи, eлектронни заявки, фирмен сайт за обмен на електронни фактури и справки
+footer: Dreem Business Software | Copyright © 2003-2020 Unicontsoft
 ---
