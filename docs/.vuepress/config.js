@@ -5,32 +5,64 @@ module.exports = {
     nav: [
       { text: 'Начало', link: '/' },
       { text: 'Dreem', link: '/dreem/' },
-      { text: 'Test', link: '/test/' },
+      { text: 'POS', link: '/pos/' },
     ],
+    sidebarDepth: 0,
     sidebar: [
-      {
-        title: 'Начало',
-        path: '/',
-        collapsable: false,
-        sidebarDepth: 0,
-      },
+      '/',
       {
         title: 'Dreem',
         path: '/dreem/',
-        collapsable: false,
-        sidebarDepth: 0,
+        initialOpenGroupIndex: 1,
         children: [
-          '/dreem/',
+          {
+            title: 'Номенклатури',
+            path: '/dreem/nom/',
+            collapsable: false,
+            children: [
+              {
+                title: 'Референтни номенклатури',
+                path: '/dreem/nom/refnom/',
+                collapsable: false,
+                children: [
+                  ['/dreem/nom/refnom/currencies', 'Валути'],
+                  ['/dreem/nom/refnom/measures', 'Мерки'],
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Търговска система',
+            path: '/dreem/trade/',
+            collapsable: false,
+            children: [
+                
+            ],
+          },
+          {
+            title: 'Справки',
+            path: '/dreem/reports/',
+            collapsable: false,
+            children: [
+                
+            ],
+          },
+          {
+            title: 'Счетоводство',
+            path: '/dreem/acc/',
+            collapsable: false,
+            children: [
+                
+            ],
+          },
         ],
       },
       {
-        title: 'Test',
-        path: '/test/',
-        collapsable: false,
-        sidebarDepth: 0,
+        title: 'POS',
+        path: '/pos/',
+        initialOpenGroupIndex: 1,
         children: [
-          '/test/',
-          '/test/opisanie',
+          '/pos/opisanie',
         ],
       },
     ],
