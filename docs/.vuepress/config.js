@@ -13,7 +13,7 @@ module.exports = {
       {
         title: 'Dreem',
         path: '/dreem/',
-        initialOpenGroupIndex: 1,
+        collapsable: false,
         children: [
           {
             title: 'Номенклатури',
@@ -60,7 +60,7 @@ module.exports = {
       {
         title: 'POS',
         path: '/pos/',
-        initialOpenGroupIndex: 1,
+        collapsable: false,
         children: [
           '/pos/opisanie',
         ],
