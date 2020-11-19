@@ -7,12 +7,21 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
-
-    - name: Build and Deploy
-      uses: testthedocs/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BUILD_DIR: docs/.vuepress/dist/
-        BUILD_SCRIPT: npm install -g vuepress && npm run docs:build
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+        
+      - name: Install and Build
+        run: |
+            mkdir ~/.npm-global
+            npm config set prefix '~/.npm-global'
+            PATH=~/.npm-global/bin:$PATH
+            npm install -g vuepress
+            npm run docs:build
+            
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: docs/.vuepress/dist
+            SINGLE_COMMIT: true
